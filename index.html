@@ -210,6 +210,21 @@
             font-size: 16px;
         }
 
+        .section-list ul ul {
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+
+        .section-list ul ul li {
+            font-size: 15px;
+            padding: 4px 0;
+            color: var(--secondary-color);
+        }
+
+        .section-list ul ul li b {
+            color: var(--text-color);
+        }
+
         .section-list li b {
             color: var(--secondary-color);
             margin-right: 8px;
@@ -359,6 +374,31 @@
                     Yongzhong Wang*, Keyu Zhu*, Yong Zhong*, Liqiong Wang, Jinyu Yang, Feng Zheng (*Equal contribution)<br>
                     <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026</i> (Under Review)<br>
                     [<a href="https://arxiv.org/abs/2603.11811" target="_blank">arXiv</a>]
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-list">
+                <h2>Experience</h2>
+                <ul>
+                    <li>
+                        <b>VIP Lab, SUSTech</b> | Sep 2024 – Present<br>
+                        Research Assistant | Large Model-Based Embodied AI Closed-loop Data Generation System
+                        <ul>
+                            <li><b>Fully Automated Data Pipeline (RADAR)</b>: Designed and implemented a fully autonomous closed-loop robot data generation engine. Integrated VLMs for zero-instruction scene perception and task planning, minimizing human intervention.</li>
+                            <li><b>Simulation & Baselines</b>: Built testing benchmarks in RLBench. Reproduced and evaluated VLM baselines (ReKep and MOKA); refactored Instant Policy environments for ManiSkill.</li>
+                            <li><b>Hardware Deployment</b>: Performed hand-eye calibration for the Realman RM65-B arm. Introduced a dual-RealSense D435i camera setup to solve occlusion issues, achieving multi-view point cloud registration and fusion.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Spatialtemporal AI (Embodied AI Startup)</b> | Jul 2025 – Sep 2025<br>
+                        Algorithm Intern | Automated Imitation Learning Retrieval System
+                        <ul>
+                            <li><b>Algorithm Refactoring</b>: Refactored CLIP-based similarity matching using high-precision VLM semantic matching to resolve action confusion.</li>
+                            <li><b>Cross-Modal Instruction System</b>: Built an expert demonstration database combining object point clouds + task instructions, enabling accurate Top-K trajectory retrieval.</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
