@@ -185,54 +185,43 @@
             color: white;
         }
 
-        .blog-list {
+        .section-list {
             max-width: 700px;
             margin: 0 auto;
         }
 
-        .blog-post {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
-            transition: var(--transition);
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .blog-date {
-            font-size: 14px;
-            color: var(--secondary-color);
-            margin-bottom: 8px;
-        }
-
-        .blog-title {
-            font-size: 20px;
+        .section-list h2 {
+            font-size: 24px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
+            text-align: left;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
         }
 
-        .blog-excerpt {
+        .section-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-list li {
+            padding: 8px 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .section-list li b {
             color: var(--secondary-color);
-            font-size: 15px;
-            line-height: 1.5;
+            margin-right: 8px;
         }
 
-        .blog-tag {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 12px;
-            margin-right: 6px;
-            margin-top: 10px;
+        .section-list a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .section-list a:hover {
+            text-decoration: underline;
         }
 
         .contact-form {
@@ -343,63 +332,40 @@
             </div>
         </header>
 
-        <section id="about">
-            <h2>About me</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size: 18px;">
-                SUSTech 3rd Grade, interested in Embodied Intelligence & Computer Vision
-            </p>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <!-- <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="project-title">移动应用设计</h3>
-                    <p class="project-description">一款专注于用户体验的移动应用，采用最新的设计语言和交互模式。</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h3 class="project-title">网页设计</h3>
-                    <p class="project-description">响应式网站设计，确保在各种设备上都能提供一致且优秀的用户体验。</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="project-title">品牌设计</h3>
-                    <p class="project-description">完整的品牌识别系统设计，包括logo、色彩方案和视觉元素。</p>
-                </div> -->
+        <section id="updates">
+            <div class="section-list">
+                <h2>Updates</h2>
+                <ul>
+                    <li><b>May 2026</b> Welcome to my homepage!</li>
+                </ul>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <!-- <div class="skill-tag">UI/UX 设计</div>
-                <div class="skill-tag">前端开发</div>
-                <div class="skill-tag">响应式设计</div>
-                <div class="skill-tag">Figma</div>
-                <div class="skill-tag">HTML/CSS</div> -->
-                <div class="skill-tag">Java</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">Linux</div>
+        <section id="research">
+            <div class="section-list">
+                <h2>Research</h2>
+                <ul>
+                    <li><b>Embodied Intelligence</b> Exploring robotic manipulation and dexterous hand control.</li>
+                    <li><b>Computer Vision</b> 3D perception and scene understanding.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-list">
+                <h2>Projects</h2>
+                <ul>
+                    <li>More projects coming soon...</li>
+                </ul>
             </div>
         </section>
 
         <section id="blog">
-            <h2>Blog</h2>
-            <div class="blog-list">
-                <a class="blog-post" href="#">
-                    <div class="blog-date">May 10, 2026</div>
-                    <div class="blog-title">Hello World</div>
-                    <div class="blog-excerpt">Welcome to my blog! This is my first post. Stay tuned for more content about robotics, computer vision, and other interesting topics.</div>
-                    <span class="blog-tag">Life</span>
-                </a>
+            <div class="section-list">
+                <h2>Blog</h2>
+                <ul>
+                    <li><b>May 2026</b> <a href="#">Hello World</a> — Welcome to my blog! Stay tuned for more content.</li>
+                </ul>
             </div>
         </section>
 
