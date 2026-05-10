@@ -11,19 +11,8 @@
             --text: #1d1d1f;
             --gray: #86868b;
             --accent: #0071e3;
-            --accent-hover: #0077ed;
             --card-bg: #f5f5f7;
             --border: rgba(0, 0, 0, 0.08);
-        }
-
-        .dark-mode {
-            --bg: #000000;
-            --text: #f5f5f7;
-            --gray: #86868b;
-            --accent: #2997ff;
-            --accent-hover: #4db2ff;
-            --card-bg: #1c1c1e;
-            --border: rgba(255, 255, 255, 0.08);
         }
 
         * {
@@ -46,30 +35,6 @@
             max-width: 980px;
             margin: 0 auto;
             padding: 0 24px;
-        }
-
-        /* ---- Theme Toggle ---- */
-        .theme-toggle {
-            position: fixed;
-            top: 24px;
-            right: 24px;
-            background: var(--card-bg);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 100;
-            color: var(--gray);
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .theme-toggle:hover {
-            color: var(--text);
         }
 
         /* ---- Hero ---- */
@@ -251,10 +216,6 @@
     </style>
 </head>
 <body>
-    <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </button>
-
     <div class="container">
         <header class="hero">
             <h1>Yongzhong Wang</h1>
@@ -310,20 +271,5 @@
         </footer>
     </div>
 
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
-
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        });
-    </script>
 </body>
 </html>
