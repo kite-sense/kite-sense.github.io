@@ -185,6 +185,56 @@
             color: white;
         }
 
+        .blog-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .blog-post {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-date {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .blog-excerpt {
+            color: var(--secondary-color);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-right: 6px;
+            margin-top: 10px;
+        }
+
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -289,8 +339,6 @@
             <p class="tagline">Designer & Developer</p>
             <div class="social-links">
                 <a href="https://github.com/kite-sense" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:wangyz2023@mail.sustech.edu.cn" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
         </header>
@@ -340,6 +388,18 @@
                 <div class="skill-tag">Java</div>
                 <div class="skill-tag">Python</div>
                 <div class="skill-tag">Linux</div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-list">
+                <a class="blog-post" href="#">
+                    <div class="blog-date">May 10, 2026</div>
+                    <div class="blog-title">Hello World</div>
+                    <div class="blog-excerpt">Welcome to my blog! This is my first post. Stay tuned for more content about robotics, computer vision, and other interesting topics.</div>
+                    <span class="blog-tag">Life</span>
+                </a>
             </div>
         </section>
 
