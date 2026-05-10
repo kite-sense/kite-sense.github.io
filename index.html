@@ -144,7 +144,19 @@
 
         /* ---- Publications ---- */
         .pub-item {
-            margin-bottom: 24px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .pub-thumb {
+            float: left;
+            width: 280px;
+            margin: 0 30px 16px 0;
+        }
+
+        .pub-thumb video {
+            width: 100%;
+            border-radius: 8px;
         }
 
         .pub-title {
@@ -240,6 +252,11 @@
         <section id="publications">
             <h2 class="section-title">Publications</h2>
             <div class="pub-item">
+                <a href="https://arxiv.org/abs/2603.11811" target="_blank" class="pub-thumb">
+                    <video autoplay loop muted playsinline>
+                        <source src="RADAR_video.mp4" type="video/mp4">
+                    </video>
+                </a>
                 <div class="pub-title">RADAR: Robot Autonomous Data Acquisition and Resetting via Few-Shot Imitation</div>
                 <div class="pub-authors">Yongzhong Wang*, Keyu Zhu*, Yong Zhong*, Liqiong Wang, Jinyu Yang, Feng Zheng (*Equal contribution)</div>
                 <div class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026 (Under Review)</div>
