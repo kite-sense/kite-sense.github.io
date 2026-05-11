@@ -207,6 +207,84 @@
             text-decoration: underline;
         }
 
+        /* ---- Project Block ---- */
+        .project-block {
+            margin-bottom: 64px;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: var(--gray);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .project-desc {
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--gray);
+            margin-bottom: 32px;
+            max-width: 780px;
+        }
+
+        .project-gallery {
+            display: flex;
+            gap: 12px;
+        }
+
+        .gallery-card {
+            flex: 1;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            background: #e8e8ed;
+        }
+
+        .gallery-card figcaption {
+            padding: 10px 14px;
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        .project-links {
+            margin-top: 20px;
+        }
+
+        .project-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
         /* ---- Responsive ---- */
         @media (max-width: 768px) {
             .hero h1 {
@@ -223,6 +301,9 @@
             }
             section {
                 padding: 60px 0;
+            }
+            .project-gallery {
+                flex-direction: column;
             }
         }
     </style>
@@ -266,11 +347,31 @@
 
         <section id="projects">
             <h2 class="section-title">Projects</h2>
-            <div class="section-list">
-                <ul>
-                    <li><b>Oct 2025 – Dec 2025</b> Re-implementation of VLM-driven Baselines: MOKA</li>
-                </ul>
-            </div>
+
+            <article class="project-block">
+                <h3 class="project-title">MOKA: VLM-based Keypoint Planning in Simulation</h3>
+                <p class="project-meta">Oct 2025 – Dec 2025</p>
+                <p class="project-desc">
+                    MOKA (RSS 2024) originally demonstrated VLM-driven robotic manipulation on real hardware only.
+                    This project adapts MOKA to simulation environments &mdash; porting the visual prompting pipeline
+                    from real robots to RLBench/ManiSkill &mdash; enabling reproducible evaluation of GPT-4V keypoint
+                    planning. Given a single RGB observation and a natural-language instruction, the model annotates
+                    grasp and target keypoints with spatial waypoints, which are converted into robot trajectories.
+                </p>
+                <div class="project-gallery">
+                    <figure class="gallery-card">
+                        <img src="moka_sim/Basketball/motion_image.jpg" alt="Basketball: VLM keypoints and planned trajectory" loading="lazy">
+                        <figcaption>"Shoot the basketball into the hoop"</figcaption>
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="moka_sim/trash_in_bin/motion_image.jpg" alt="Trash in bin: VLM keypoints and planned trajectory" loading="lazy">
+                        <figcaption>"Move the crumpled paper into the trash can"</figcaption>
+                    </figure>
+                </div>
+                <div class="project-links">
+                    <a href="https://arxiv.org/abs/2406.09036" target="_blank">Paper (MOKA, RSS 2024)</a>
+                </div>
+            </article>
         </section>
 
         <section id="experience">
