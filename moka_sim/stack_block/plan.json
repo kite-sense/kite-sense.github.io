@@ -1,0 +1,1 @@
+[{"instruction": "Push the yellow block to the white target.", "object_grasped": "", "object_unattached": "yellow block", "motion_direction": "downward"}, {"instruction": "Move the red block onto the yellow block.", "object_grasped": "red block", "object_unattached": "yellow block", "motion_direction": "downward"}]

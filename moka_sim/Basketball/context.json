@@ -1,0 +1,1 @@
+{"grasp_keypoint": "P3", "function_keypoint": "P3", "target_keypoint": "Q1", "target_tile": "b2", "pre_contact_tile": "b4", "post_contact_tile": "b2", "pre_contact_height": "same", "post_contact_height": "same", "target_angle": "forward"}
