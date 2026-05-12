@@ -259,7 +259,18 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            margin-bottom: 8px;
+        }
+
+        .task-detail {
             margin-bottom: 28px;
+        }
+
+        .task-detail video {
+            width: 100%;
+            max-width: 520px;
+            border-radius: 8px;
+            margin-top: 8px;
         }
 
         .task-row img {
@@ -383,6 +394,12 @@
                         <h4 style="font-size:17px;font-weight:600;margin-bottom:6px;white-space:nowrap;">Move the crumpled paper into the trash can</h4>
                         <p>Grasp <span>crumpled paper</span> at <span>P3</span>, target <span>trash can</span> at <span>Q1</span>, motion: <span>downward</span></p>
                     </div>
+                </div>
+                <div class="task-detail">
+                    <p><b style="color:#d32f2f;">Failure case:</b> 2D-to-3D coordinate projection error caused the gripper to miss the crumpled paper entirely.</p>
+                    <video autoplay loop muted playsinline>
+                        <source src="moka_sim/trash_in_bin/moka_rubbish_bin.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="task-row">
                     <img src="moka_sim/phone_on_base/annotated_image.jpg" alt="Phone on base annotated" loading="lazy">
