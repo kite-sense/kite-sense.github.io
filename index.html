@@ -227,11 +227,32 @@
         }
 
         .project-desc {
-            font-size: 17px;
-            line-height: 1.65;
-            color: var(--gray);
+            list-style: none;
+            padding: 0;
             margin-bottom: 32px;
             max-width: 780px;
+        }
+
+        .project-desc li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--gray);
+            margin-bottom: 12px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .project-desc li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .project-desc li b {
+            color: var(--text);
+            font-weight: 600;
         }
 
         .task-row {
@@ -349,13 +370,11 @@
             <article class="project-block">
                 <h3 class="project-title">MOKA: VLM-based Keypoint Planning in Simulation</h3>
                 <p class="project-meta">Oct 2025 – Dec 2025</p>
-                <p class="project-desc">
-                    MOKA (RSS 2024) originally demonstrated VLM-driven robotic manipulation on real hardware only.
-                    This project adapts MOKA to simulation environments &mdash; porting the visual prompting pipeline
-                    from real robots to RLBench &mdash; enabling reproducible evaluation of GPT-4V keypoint
-                    planning. Given a single RGB observation and a natural-language instruction, the model annotates
-                    grasp and target keypoints with spatial waypoints, which are converted into robot trajectories.
-                </p>
+                <ul class="project-desc">
+                    <li><b>Sim-to-Real Reverse Engineering:</b> Independently ported the visual prompting framework MOKA (RSS 2024) from its original hardware-exclusive, ROS-dependent codebase into the RLBench physics simulator, establishing a rigorously reproducible baseline for VLM-driven manipulation.</li>
+                    <li><b>VLM-Simulation Bridge:</b> Engineered a seamless pipeline connecting RLBench camera renders with the GPT-4V API, enabling the generation of Set-of-Mark visual prompts and the automated extraction of semantic "grasp" and "target" keypoints based on natural-language instructions.</li>
+                    <li><b>Benchmarking &amp; Analysis:</b> Successfully deployed this adapted framework to rigorously evaluate multi-step tasks, exposing the inherent limitations of 2D-pixel heuristics in complex contact dynamics, which directly motivated the architecture of our IROS 2026 submission (RADAR).</li>
+                </ul>
                 <div class="task-row">
                     <img src="moka_sim/Basketball/annotated_image.jpg" alt="Basketball annotated" loading="lazy">
                     <img src="moka_sim/Basketball/motion_image.jpg" alt="Basketball motion" loading="lazy">
