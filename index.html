@@ -395,18 +395,18 @@
                         <p>Grasp <span>crumpled paper</span> at <span>P3</span>, target <span>trash can</span> at <span>Q1</span>, motion: <span>downward</span></p>
                     </div>
                 </div>
-                <div class="task-detail">
-                    <p><b style="color:#d32f2f;">Failure case:</b> 2D-to-3D coordinate projection error caused the gripper to miss the crumpled paper entirely.</p>
-                    <video autoplay loop muted playsinline>
+                <div class="task-detail" style="display:flex;align-items:center;gap:20px;">
+                    <video autoplay loop muted playsinline style="width:520px;flex-shrink:0;border-radius:8px;">
                         <source src="moka_sim/trash_in_bin/moka_rubbish_bin.mp4" type="video/mp4">
                     </video>
+                    <p style="font-size:15px;color:var(--gray);line-height:1.6;"><b style="color:#1d1d1f;">Failure case:</b> 2D-to-3D coordinate projection error caused the gripper to miss the crumpled paper entirely.</p>
                 </div>
                 <div class="task-row">
                     <img src="moka_sim/phone_on_base/annotated_image.jpg" alt="Phone on base annotated" loading="lazy">
                     <img src="moka_sim/phone_on_base/motion_image.jpg" alt="Phone on base motion" loading="lazy">
                     <div class="task-info">
                         <h4 style="font-size:17px;font-weight:600;margin-bottom:6px;white-space:nowrap;">Move the phone onto its base</h4>
-                        <p><b style="color:#d32f2f;">Failure case:</b> grasp keypoints <span>P5</span> incorrectly land on the <span>base</span> instead of the phone, highlighting the limitation of 2D visual prompting in ambiguous object boundaries.</p>
+                        <p><b style="color:#1d1d1f;">Failure case:</b> grasp keypoints <span>P5</span> incorrectly land on the <span>base</span> instead of the phone, highlighting the limitation of 2D visual prompting in ambiguous object boundaries.</p>
                     </div>
                 </div>
             </article>
