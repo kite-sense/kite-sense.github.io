@@ -378,7 +378,7 @@
             <h2 class="section-title">Updates</h2>
             <div class="section-list">
                 <ul>
-                    <li><b>June 2026</b> Our paper <a href="#publications">RADAR</a> gets accepted by IROS 2026!</li>
+                    <li><b>June 2026</b> Our paper <a href="#publications" data-flash="radar">RADAR</a> gets accepted by IROS 2026!</li>
                     <li><b>May 2026</b> Welcome to my homepage!</li>
                 </ul>
             </div>
@@ -386,7 +386,7 @@
 
         <section id="publications">
             <h2 class="section-title">Publications</h2>
-            <div class="pub-item">
+            <div class="pub-item" id="radar">
                 <a href="https://arxiv.org/abs/2603.11811" target="_blank" class="pub-thumb">
                     <video autoplay loop muted playsinline>
                         <source src="RADAR_video.mp4" type="video/mp4">
@@ -472,7 +472,11 @@
     <script>
         document.querySelectorAll('a[href^="#"]').forEach((link) => {
             link.addEventListener('click', () => {
-                const target = document.getElementById(link.getAttribute('href').slice(1));
+                // data-flash highlights a specific element (e.g. one paper) while scrolling to another anchor
+                const flashId = link.getAttribute('data-flash');
+                const target = flashId
+                    ? document.getElementById(flashId)
+                    : document.getElementById(link.getAttribute('href').slice(1));
                 if (!target) return;
                 target.classList.remove('flash');
                 void target.offsetWidth; // force reflow so the animation replays on repeat clicks
