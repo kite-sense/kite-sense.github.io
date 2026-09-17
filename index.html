@@ -180,6 +180,13 @@
             border-radius: 8px;
         }
 
+        .pub-thumb-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            background: var(--card-bg);
+        }
+
         .pub-title {
             font-size: 19px;
             font-weight: 600;
@@ -378,6 +385,7 @@
             <h2 class="section-title">Updates</h2>
             <div class="section-list">
                 <ul>
+                    <li><b>September 2026</b> We submitted our paper <a href="#publications" data-flash="navi-agent">Navi-Agent</a> to ICRA 2027!</li>
                     <li><b>June 2026</b> Our paper <a href="#publications" data-flash="radar">RADAR</a> gets accepted by IROS 2026!</li>
                     <li><b>May 2026</b> Welcome to my homepage!</li>
                 </ul>
@@ -386,6 +394,17 @@
 
         <section id="publications">
             <h2 class="section-title">Publications</h2>
+            <div class="pub-item" id="navi-agent">
+                <div class="pub-thumb">
+                    <!-- TODO: replace with project video once available -->
+                    <div class="pub-thumb-placeholder"></div>
+                </div>
+                <div class="pub-title">Navi-Agent: Unlocalized Monocular Navigation Agent</div>
+                <div class="pub-authors">Wenyuan Xie*, Mengyang Hong*, <b>Yongzhong Wang*</b>, Yanbiao Ji, Yijin Zhou, Shaokai Wu, Shalayiding Sirejiding, Huayi Zhou, Yi-Chao Chen, Ma Ling, Yue Ding&dagger;, Hongtao Lu&dagger; (*Equal contribution, &dagger;Corresponding authors)</div>
+                <div class="pub-venue">IEEE International Conference on Robotics and Automation (ICRA), 2027 (Under Review)</div>
+                <!-- TODO: replace href with arXiv URL once posted -->
+                <div class="pub-links"><a href="#" target="_blank">arXiv</a></div>
+            </div>
             <div class="pub-item" id="radar">
                 <a href="https://arxiv.org/abs/2603.11811" target="_blank" class="pub-thumb">
                     <video autoplay loop muted playsinline>
