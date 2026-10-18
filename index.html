@@ -175,17 +175,12 @@
             margin: 0 30px 16px 0;
         }
 
-        .pub-thumb video {
+        .pub-thumb video,
+        .pub-thumb img {
             width: 100%;
             border-radius: 8px;
         }
 
-        .pub-thumb-placeholder {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: 8px;
-            background: var(--card-bg);
-        }
 
         .pub-title {
             font-size: 19px;
@@ -411,10 +406,9 @@
         <section id="publications">
             <h2 class="section-title">Publications</h2>
             <div class="pub-item" id="navi-agent">
-                <div class="pub-thumb">
-                    <!-- TODO: replace with project video once available -->
-                    <div class="pub-thumb-placeholder"></div>
-                </div>
+                <a href="https://arxiv.org/abs/2609.20388" target="_blank" class="pub-thumb">
+                    <img src="navi_website_picture.png" alt="Navi-Agent overview" loading="lazy">
+                </a>
                 <div class="pub-title">Navi-Agent: Unlocalized Monocular Navigation Agent</div>
                 <div class="pub-authors">Wenyuan Xie*, Mengyang Hong*, <b>Yongzhong Wang*</b>, Yanbiao Ji, Yijin Zhou, Shaokai Wu, Shalayiding Sirejiding, Huayi Zhou, Yi-Chao Chen, Ma Ling, Yue Ding, Hongtao Lu (*Equal contribution)</div>
                 <div class="pub-venue"><b>ICRA 2027 (Under Review)</b></div>
