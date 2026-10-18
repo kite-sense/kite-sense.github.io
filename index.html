@@ -33,6 +33,7 @@
 
         @keyframes flash-highlight {
             from { background-color: rgba(0, 113, 227, 0.14); }
+            to   { background-color: transparent; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -164,20 +165,14 @@
 
         /* ---- Publications ---- */
         .pub-item {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            column-gap: 30px;
-            align-content: start;
             margin-bottom: 40px;
+            overflow: hidden;
         }
 
-        .pub-item > * {
-            grid-column: 2;
-        }
-
-        .pub-item > .pub-thumb {
-            grid-column: 1;
-            grid-row: 1 / span 4;
+        .pub-thumb {
+            float: left;
+            width: 280px;
+            margin: 0 30px 16px 0;
         }
 
         .pub-thumb video {
@@ -193,36 +188,29 @@
         }
 
         .pub-title {
-            font-size: 24px;
+            font-size: 19px;
             font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 8px;
-        }
-
-        /* author / venue / link typography mirrors apple.com/mac "Mac essentials." */
-
-        .pub-authors,
-        .pub-venue {
-            font-size: 17px;
-            line-height: 1.235;
-            letter-spacing: -0.022em;
-            color: rgba(0, 0, 0, 0.88);
             margin-bottom: 4px;
         }
 
-        .pub-links {
-            margin-top: 14px;
+        .pub-authors {
+            font-size: 15px;
+            color: var(--gray);
+            margin-bottom: 2px;
+        }
+
+        .pub-venue {
+            font-size: 15px;
+            color: var(--gray);
+            font-style: italic;
+            margin-bottom: 4px;
         }
 
         .pub-links a {
             color: var(--accent);
             text-decoration: none;
-            font-size: 17px;
-            letter-spacing: -0.022em;
-        }
-
-        .pub-links a::after {
-            content: "\00a0\203A";
+            font-size: 14px;
+            font-weight: 500;
         }
 
         .pub-links a:hover {
@@ -363,17 +351,6 @@
             }
             .section-title {
                 font-size: 36px;
-            }
-            .pub-item {
-                grid-template-columns: 1fr;
-            }
-            .pub-item > *,
-            .pub-item > .pub-thumb {
-                grid-column: 1;
-                grid-row: auto;
-            }
-            .pub-thumb {
-                margin-bottom: 16px;
             }
             .hero {
                 padding: 80px 0 60px;
