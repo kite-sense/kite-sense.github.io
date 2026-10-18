@@ -162,16 +162,37 @@
             text-decoration: underline;
         }
 
-        /* ---- Publications (typography mirrors apple.com/mac "Mac essentials." cards) ---- */
+        /* ---- Publications ---- */
         .pub-item {
-            margin-bottom: 24px;
-            padding: 56px 48px;
-            border-radius: 28px;
-            background: var(--card-bg);
-            text-align: center;
-            overflow: hidden;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            column-gap: 30px;
+            align-content: start;
+            margin-bottom: 40px;
         }
 
+        .pub-item > * {
+            grid-column: 2;
+        }
+
+        .pub-item > .pub-thumb {
+            grid-column: 1;
+            grid-row: 1 / span 4;
+        }
+
+        .pub-thumb video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .pub-thumb-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            background: var(--card-bg);
+        }
+
+        /* typography mirrors apple.com/mac "Mac essentials." (title / description / link) */
         .pub-title {
             font-size: 32px;
             font-weight: 600;
@@ -181,7 +202,7 @@
         }
 
         .pub-title a {
-            color: rgba(0, 0, 0, 0.88);
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -195,8 +216,7 @@
             line-height: 1.235;
             letter-spacing: -0.022em;
             color: rgba(0, 0, 0, 0.88);
-            max-width: 720px;
-            margin: 0 auto 4px;
+            margin-bottom: 4px;
         }
 
         .pub-links {
@@ -204,7 +224,7 @@
         }
 
         .pub-links a {
-            color: #0066cc;
+            color: var(--accent);
             text-decoration: none;
             font-size: 17px;
             letter-spacing: -0.022em;
@@ -216,19 +236,6 @@
 
         .pub-links a:hover {
             text-decoration: underline;
-        }
-
-        .pub-thumb {
-            display: block;
-            max-width: 640px;
-            /* negative bottom margin cancels the card padding so media sits flush with the card edge */
-            margin: 40px auto -56px;
-        }
-
-        .pub-thumb video {
-            display: block;
-            width: 100%;
-            border-radius: 12px 12px 0 0;
         }
 
         /* ---- Footer ---- */
@@ -366,6 +373,20 @@
             .section-title {
                 font-size: 36px;
             }
+            .pub-item {
+                grid-template-columns: 1fr;
+            }
+            .pub-item > *,
+            .pub-item > .pub-thumb {
+                grid-column: 1;
+                grid-row: auto;
+            }
+            .pub-thumb {
+                margin-bottom: 16px;
+            }
+            .pub-title {
+                font-size: 24px;
+            }
             .hero {
                 padding: 80px 0 60px;
             }
@@ -410,22 +431,25 @@
         <section id="publications">
             <h2 class="section-title">Publications</h2>
             <div class="pub-item" id="navi-agent">
+                <div class="pub-thumb">
+                    <!-- TODO: replace with project video once available -->
+                    <div class="pub-thumb-placeholder"></div>
+                </div>
                 <div class="pub-title"><a href="https://arxiv.org/abs/2609.20388" target="_blank">Navi-Agent: Unlocalized Monocular Navigation Agent</a></div>
                 <div class="pub-authors">Wenyuan Xie*, Mengyang Hong*, <b>Yongzhong Wang*</b>, Yanbiao Ji, Yijin Zhou, Shaokai Wu, Shalayiding Sirejiding, Huayi Zhou, Yi-Chao Chen, Ma Ling, Yue Ding, Hongtao Lu (*Equal contribution)</div>
                 <div class="pub-venue">IEEE International Conference on Robotics and Automation (ICRA), 2027 (Under Review)</div>
                 <div class="pub-links"><a href="https://arxiv.org/abs/2609.20388" target="_blank">arXiv</a></div>
-                <!-- TODO: add <a class="pub-thumb"><video>…</video></a> here once the project video is available -->
             </div>
             <div class="pub-item" id="radar">
-                <div class="pub-title"><a href="https://arxiv.org/abs/2603.11811" target="_blank">RADAR: Closed-Loop Robotic Data Generation via Semantic Planning and Autonomous Causal Environment Reset</a></div>
-                <div class="pub-authors"><b>Yongzhong Wang*</b>, Keyu Zhu*, Yong Zhong*, Liqiong Wang, Jinyu Yang, Feng Zheng (*Equal contribution)</div>
-                <div class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026 (Accepted)</div>
-                <div class="pub-links"><a href="https://arxiv.org/abs/2603.11811" target="_blank">arXiv</a></div>
                 <a href="https://arxiv.org/abs/2603.11811" target="_blank" class="pub-thumb">
                     <video autoplay loop muted playsinline>
                         <source src="RADAR_video.mp4" type="video/mp4">
                     </video>
                 </a>
+                <div class="pub-title"><a href="https://arxiv.org/abs/2603.11811" target="_blank">RADAR: Closed-Loop Robotic Data Generation via Semantic Planning and Autonomous Causal Environment Reset</a></div>
+                <div class="pub-authors"><b>Yongzhong Wang*</b>, Keyu Zhu*, Yong Zhong*, Liqiong Wang, Jinyu Yang, Feng Zheng (*Equal contribution)</div>
+                <div class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026 (Accepted)</div>
+                <div class="pub-links"><a href="https://arxiv.org/abs/2603.11811" target="_blank">arXiv</a></div>
             </div>
         </section>
 
